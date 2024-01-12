@@ -39,7 +39,7 @@ body * {
     color: var(--text-color);
 }
 
-/* container */
+
 
 #container {
     width: 100%;
@@ -116,6 +116,7 @@ ul {
     flex-direction: column;
     gap: 16px;
     padding: 24px;
+    user-select: none;
 
 }
 
