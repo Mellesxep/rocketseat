@@ -31,6 +31,7 @@ body {
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
+    height: 100vh;
 }
 
 body * {
@@ -63,14 +64,14 @@ body * {
 }
 
 /* switch */
-#switch{
+#switch {
     position: relative;
     width: 64px;
     margin: 4px auto;
-    
+
 }
 
-#switch span{
+#switch span {
     display: block;
     width: 64px;
     height: 24px;
@@ -96,10 +97,11 @@ body * {
 }
 
 
-.ligth #switch button{
-right: 0;
-left: initial;
+.ligth #switch button {
+    right: 0;
+    left: initial;
 }
+
 /* links */
 
 ul {
@@ -164,4 +166,15 @@ footer {
 
 footer a {
     margin-left: 6px;
+}
+
+/* midia */
+
+@media (min-width: 700px) {
+    :root {
+--bg-url: url(./assets/desktopdark.jpg);
+ }
+    .ligth{
+        --bg-url: url(./assets/desktoplight.jpg);
+    }
 }
