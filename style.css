@@ -10,7 +10,7 @@
     --border-color: rgba(255, 255, 255, 0.50);
     --surface-color: rgba(255, 255, 255, 0.10);
     --surface-hover: rgba(255, 255, 255, 0.05);
-    --sufacer-social: rgba(255, 255, 255, 0.20);
+    --surface-social: rgba(255, 255, 255, 0.25);
     --switch-bg-url: url("assets/MoonStars.svg");
 }
 
@@ -71,6 +71,10 @@ body * {
 
 }
 
+.ligth #switch button {
+    animation: slide 0.2s forwards;
+}
+
 #switch span {
     display: block;
     width: 64px;
@@ -94,12 +98,12 @@ body * {
     left: 0;
     transform: translateY(-50%);
     top: 50%;
+    animation: slide-out 0.2s;
+
 }
 
-
-.ligth #switch button {
-    right: 0;
-    left: initial;
+#switch button :hover {
+    outline: 8px solid var(--surface-social);
 }
 
 /* links */
@@ -172,9 +176,36 @@ footer a {
 
 @media (min-width: 700px) {
     :root {
---bg-url: url(./assets/desktopdark.jpg);
- }
-    .ligth{
+        --bg-url: url(./assets/desktopdark.jpg);
+    }
+
+    .ligth {
         --bg-url: url(./assets/desktoplight.jpg);
+    }
+}
+
+/* animation */
+
+@keyframes slide {
+
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 50%;
+    }
+
+}
+
+@keyframes slide-out {
+
+    from {
+        left: 50%;
+    }
+
+    to {
+        left: 0;
+
     }
 }
